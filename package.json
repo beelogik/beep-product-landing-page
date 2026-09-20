@@ -5,7 +5,13 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "format": "biome format --write .",
+    "lint": "biome lint .",
+    "check": "biome check --css-parse-tailwind-directives=true .",
+    "check:fix": "biome check --write --css-parse-tailwind-directives=true .",
+    "biome:upgrade": "biome migrate --write",
+    "git:prepare": "lefthook install"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",
@@ -15,7 +21,9 @@
     "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@biomejs/biome": "^2.5.14",
+    "@types/bun": "latest",
+    "lefthook": "^2.1.14"
   },
   "peerDependencies": {
     "typescript": "^7"

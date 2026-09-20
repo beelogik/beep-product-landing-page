@@ -1,10 +1,10 @@
 ---
-import Logo from '../assets/b-logo-w-text-left.svg';
-import { brand } from '../data/site';
+import Logo from "../assets/b-logo-w-text-left.svg";
+import { brand } from "../data/site";
 
 const MINIMUM_VISIBLE_MS = 3000; // the "curtain" splash
 const MAXIMUM_VISIBLE_MS = 8000; // timeout to never block longer than this if `load` stalls
-const SESSION_KEY = 'beep:splash-seen';
+const SESSION_KEY = "beep:splash-seen";
 ---
 <div id="splash" class="splash" role="status" aria-label={`Loading ${brand.name}`}>
   <div class="splash__content">

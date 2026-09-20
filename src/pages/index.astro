@@ -1,14 +1,14 @@
 ---
-import Base from '../layouts/Base.astro';
-import Logo from '../assets/b-logo-w-text-left.svg';
-import HeroMark from '../components/HeroMark.astro';
-import { brand, pricingTiers, providerComparison, marketStats, faqs } from '../data/site';
-import { buildStructuredData } from '../lib/structuredData';
+import Logo from "../assets/b-logo-w-text-left.svg";
+import HeroMark from "../components/HeroMark.astro";
+import { brand, faqs, marketStats, pricingTiers, providerComparison } from "../data/site";
+import Base from "../layouts/Base.astro";
+import { buildStructuredData } from "../lib/structuredData";
 
 const siteUrl = Astro.site?.href ?? `${brand.url}/`;
 const structuredData = buildStructuredData(siteUrl);
 const buildYear = new Date().getFullYear();
-const footerLocations = brand.locations.join(' · ');
+const footerLocations = brand.locations.join(" · ");
 ---
 <Base {structuredData}>
   <!-- NAV -->

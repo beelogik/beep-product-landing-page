@@ -1,21 +1,28 @@
 ---
-import { brand } from '../data/site';
+import { brand } from "../data/site";
 
 interface Props {
   title: string;
   description: string;
   image?: string;
-  type?: 'website' | 'article';
+  type?: "website" | "article";
   noindex?: boolean;
   structuredData?: Record<string, unknown>[];
 }
-const { title, description, image = '/og.png', type = 'website', noindex = false, structuredData = [] } = Astro.props;
+const {
+  title,
+  description,
+  image = "/og.png",
+  type = "website",
+  noindex = false,
+  structuredData = []
+} = Astro.props;
 
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site).href;
 const imageUrl = new URL(image, Astro.site).href;
 const robotsDirective = noindex
-  ? 'noindex, nofollow'
-  : 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1';
+  ? "noindex, nofollow"
+  : "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1";
 ---
 <title>{title}</title>
 <meta name="description" content={description} />
