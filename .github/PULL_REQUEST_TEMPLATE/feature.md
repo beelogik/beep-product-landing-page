@@ -15,10 +15,10 @@
 
 ## Checklist
 
-- [ ] `bun run check` passes
-- [ ] `bunx astro check` passes
+- [ ] `bun run biome:check` passes
+- [ ] `bun astro check` passes
 - [ ] `bun run build` passes
-- [ ] Tested on mobile width
+- [ ] Tested on mobile width (if applies)
 - [ ] No console errors
 
 <details>

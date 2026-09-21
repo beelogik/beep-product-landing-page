@@ -10,6 +10,7 @@
 
 ## Type
 
+<!-- Pick one that matches your contribution and replace the space with an x -->
 - [ ] `feat` — New feature
 - [ ] `fix` — Bug fix
 - [ ] `docs` — Documentation
@@ -18,15 +19,16 @@
 - [ ] `ci` — Tooling / CI
 - [ ] `chore` — Other
 
+
 ## Checklist
 
-- [ ] `bun run check` passes
-- [ ] `bunx astro check` passes
+- [ ] `bun run biome:check` passes
+- [ ] `bun astro check` passes
 - [ ] `bun run build` passes
 - [ ] No secrets committed
 
 <details>
-<summary>Related issues (optional)</summary>
+<summary>Related issues (if any)</summary>
 
 Closes #
 Relates to #

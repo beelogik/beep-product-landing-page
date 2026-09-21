@@ -21,8 +21,8 @@ Steps to confirm the fix works:
 2.
 3.
 
-- [ ] `bun run check` passes
-- [ ] `bunx astro check` passes
+- [ ] `bun run biome:check` passes
+- [ ] `bun astro check` passes
 - [ ] `bun run build` passes
 
 <details>

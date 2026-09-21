@@ -27,13 +27,13 @@
 
 ## Available Scripts
 
-| Command             | Action                                    |
-| :------------------ | :---------------------------------------- |
-| `bun run dev`       | Starts the local dev server with HMR      |
-| `bun run build`     | Builds the production site to `./dist/`   |
-| `bun run preview`   | Previews the production build locally     |
-| `bun run check`     | Runs Biome lint + format check (no writes)|
-| `bun run check:fix` | Auto-fixes Biome issues                   |
+| Command              | Action                                    |
+| :------------------- | :---------------------------------------- |
+| `bun run dev`        | Starts the local dev server with HMR      |
+| `bun run build`      | Builds the production site to `./dist/`   |
+| `bun run preview`    | Previews the production build locally     |
+| `bun run biome:check`| Runs Biome lint + format check (no writes)|
+| `bun run biome:fix`  | Auto-fixes Biome issues                   |
 
 ## Tech Stack
 
@@ -53,7 +53,7 @@ beep-product-landing-page/
 │   ├── CODEOWNERS                    # Default reviewers for PRs
 │   ├── SECURITY.md                   # Vulnerability disclosure policy
 │   ├── PULL_REQUEST_TEMPLATE.md      # Default PR template (auto-loads)
-│   ├── PULL_REQUEST_TEMPLATE/        # Specialized PR templates (?template=…)
+│   ├── PULL_REQUEST_TEMPLATE/        # Specialized PR templates (&template=…)
 │   ├── ISSUE_TEMPLATE/               # Structured issue forms
 │   └── workflows/
 │       ├── ci.yml                    # Build, Biome check, artifact upload
@@ -122,7 +122,7 @@ The same binary is used by:
 
 - The **Lefthook** pre-commit hook — auto-fixes staged files before every commit
 - Your editor — via `.zed/settings.json` pointing at `node_modules/.bin/biome`
-- The CI pipeline — runs `bun run check` on every push and PR
+- The CI pipeline — runs `bun run biome:check` on every push and PR
 
 This guarantees formatting never drifts between local and CI.
 
@@ -143,8 +143,8 @@ Two GitHub Actions workflows run on every push and pull request targeting `main`
 Runs on **`ubuntu-26.04-arm`**:
 
 1. Installs dependencies with Bun (`bun install --frozen-lockfile`).
-2. Runs Biome check (`bun run check`).
-3. Runs `astro check` for TypeScript and Astro diagnostics.
+2. Runs Biome check (`bun run biome:check`).
+3. Runs `bun astro check` for TypeScript and Astro diagnostics.
 4. Builds the production site (`bun run build`).
 5. Uploads `dist/` as a downloadable artifact (retained 7 days).
 

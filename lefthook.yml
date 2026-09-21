@@ -45,5 +45,5 @@ pre-commit:
   commands:
     biome:
       glob: "*.{js,ts,astro,json,css,md}"
-      run: bun run check --write --no-errors-on-unmatched {staged_files}
+      run: bun run biome:check --write --no-errors-on-unmatched {staged_files}
       stage_fixed: true
