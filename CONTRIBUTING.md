@@ -53,7 +53,7 @@ generated summary.
 
 5. **Verify your setup:**
    ```bash
-   bun run check
+   bun run biome:check
    bun run build
    ```
 
@@ -71,7 +71,7 @@ git fetch upstream
 git checkout -b feat/short-description upstream/main
 ```
 
-This is the single most important habit. Branching from your fork's `main`
+**This is the single most important habit**. Branching from your fork's `main`
 carries stale commits into your PR and makes review harder for everyone.
 
 ### Naming
@@ -163,8 +163,8 @@ before every commit.
 ### Manual runs
 
 ```bash
-bun run check        # Lint + format check (dry-run, no writes)
-bun run check:fix    # Auto-fix everything
+bun run biome:check        # Lint + format check (dry-run, no writes)
+bun run biome:fix    # Auto-fix everything
 ```
 
 ## Pre-Push Checklist
@@ -173,7 +173,7 @@ Before you push, run all three locally. CI runs the same checks and will fail
 if any of them break:
 
 ```bash
-bun run check          # Biome lint + format
+bun run biome:check          # Biome lint + format
 bun run build          # Production build
 ```
 
@@ -196,8 +196,8 @@ git push -u origin feat/your-branch
 1. **Open the PR** from `<your-username>:<branch>` into `beelogik:main`.
 
 2. **Fill out the template.** The default template auto-loads. For bug fixes
-   or features, append `?template=bug_fix.md` or `?template=feature.md` to the
-   compare URL to load a specialized template.
+   or features, append `&quick_pull=1&template=bug_fix.md` or `&quick_pull=1&template=feature.md` to the
+   compare URL to load a specialized template. Note: the address bar URL maybe already has `?expand=1`, hence the append.
 
 3. **Keep the description short.** Two sentences in your own words beat a
    AI-generated 4 giant paragraphs. Include:
@@ -210,7 +210,7 @@ git push -u origin feat/your-branch
 
 ### What happens after you open a PR
 
-- CI runs `bun run check`, `astro check`, and `bun run build`.
+- CI runs `bun run biome:check`, `bun astro check`, and `bun run build`.
 - CodeQL scans the Actions and JavaScript/TypeScript code for security issues.
 - Branch protection requires both checks to pass before the PR can be merged.
 - A maintainer reviews and either approves, requests changes, or asks a question.
