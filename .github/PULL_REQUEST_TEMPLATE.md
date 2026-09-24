@@ -17,6 +17,7 @@
 - [ ] `refactor` — No behavior change
 - [ ] `perf` — Performance
 - [ ] `ci` — Tooling / CI
+- [ ] `style/` — Style changes
 - [ ] `chore` — Other
 
 
