@@ -3,31 +3,31 @@
 
 /* Beep theme tokens for Tailwind v4 */
 @theme {
-  --color-brand-400: #ff9e2c;
-  --color-brand-600: #f1580a;
-  --color-ink: #120e0b;
-  --color-cream: #fff6ea;
+  --color-brand-400: #32bcad; /* Pix Cyan/Teal */
+  --color-brand-600: #06313a; /* Pix Deep Dark Teal */
+  --color-ink: #0a1416; /* Deep financial charcoal */
+  --color-cream: #e6fff7; /* Clean, soft green-white */
 }
 
 /* Basecoat tokens mapped to the Beep palette */
 .dark {
-  --background: #120e0b;
-  --foreground: #fff6ea;
-  --card: #1a1410;
-  --card-foreground: #fff6ea;
-  --popover: #1a1410;
-  --popover-foreground: #fff6ea;
-  --primary: #ff9e2c;
-  --primary-foreground: #120e0b;
-  --secondary: #261d16;
-  --secondary-foreground: #fff6ea;
-  --muted: #261d16;
-  --muted-foreground: #b8a899;
-  --accent: #2e2219;
-  --accent-foreground: #fff6ea;
-  --border: #33271e;
-  --input: #33271e;
-  --ring: #ff9e2c;
+  --background: #0a1416;
+  --foreground: #e6fff7;
+  --card: #121e20; /* Slightly elevated dark teal-tinted surface */
+  --card-foreground: #e6fff7;
+  --popover: #121e20;
+  --popover-foreground: #e6fff7;
+  --primary: #32bcad;
+  --primary-foreground: #0a1416;
+  --secondary: #17292c;
+  --secondary-foreground: #e6fff7;
+  --muted: #17292c;
+  --muted-foreground: #7e9b98; /* Muted tech-gray text */
+  --accent: #1f373a;
+  --accent-foreground: #e6fff7;
+  --border: #284448;
+  --input: #284448;
+  --ring: #32bcad;
   --radius: 0.75rem;
 }
 
@@ -49,7 +49,7 @@ body {
 }
 
 .text-gradient {
-  background: linear-gradient(90deg, #ff9e2c, #f1580a);
+  background: linear-gradient(90deg, #32bcad, #00ffa6);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;

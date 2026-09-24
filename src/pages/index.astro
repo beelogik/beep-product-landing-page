@@ -1,5 +1,5 @@
 ---
-import Logo from "../assets/b-logo-w-text-left.svg";
+import Logo from "../assets/beep-logo-solo.svg";
 import HeroMark from "../components/HeroMark.astro";
 import { brand, faqs, marketStats, pricingTiers, providerComparison } from "../data/site";
 import Base from "../layouts/Base.astro";
@@ -15,7 +15,7 @@ const footerLocations = brand.locations.join(" · ");
   <header class="sticky top-0 z-40 border-b border-border bg-ink/80 backdrop-blur">
     <nav class="mx-auto flex h-16 max-w-6xl items-center justify-between px-6" aria-label="Main">
       <a href="/" class="flex items-center gap-2 rounded-lg" aria-label={`${brand.name} home`}>
-        <Logo id="nav" class="h-12 mt-2 w-auto transition-transform hover:animate-pulse" />
+        <Logo id="nav" class="h-12 w-auto transition-filter duration-200 hover:brightness-125" />
       </a>
       <div class="hidden items-center gap-8 text-sm text-muted-foreground md:flex">
         <a href="#how" class="nav-link">How it works</a>

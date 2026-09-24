@@ -87,6 +87,7 @@ Use the same prefix as the commit type (see [Commit Conventions](#commit-convent
 | `perf/`      | Performance improvements                             |
 | `ci/`        | CI/CD and workflow changes                           |
 | `chore/`     | Maintenance, tooling, config                         |
+| `style/`     | Adding, updating or fixing styles                    |
 | `test/`      | Adding or fixing tests                               |
 
 Examples: `feat/qr-checkout`, `fix/splash-timeout`, `ci/deploy`.
